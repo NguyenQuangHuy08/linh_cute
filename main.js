@@ -25,7 +25,7 @@ function firstQuestion() {
     imageUrl: "./linh1.jpg",
     imageWidth: 300,
     imageHeight: 300,
-    background: '#a52525 url("/iput-bg.jpg")',
+    background: '#a52525 url("./iput-bg.jpg")',
     imageAlt: "Custom image",
     confirmButtonText: CONFIG.btnIntro,
   }).then(function () {
@@ -35,7 +35,7 @@ function firstQuestion() {
 
 // switch button position
 function switchButton() {
-  var audio = new Audio("/duck.mp3");
+  var audio = new Audio("./duck.mp3");
   audio.play();
   var leftNo = $("#no").css("left");
   var topNO = $("#no").css("top");
@@ -48,7 +48,7 @@ function switchButton() {
 }
 // move random button póition
 function moveButton() {
-  var audio = new Audio("/Swish1.mp3");
+  var audio = new Audio("./Swish1.mp3");
   audio.play();
   var x = Math.random() * ($(window).width() - $("#no").width()) * 0.9;
   var y = Math.random() * ($(window).height() - $("#no").height()) * 0.9;
@@ -93,7 +93,7 @@ function textGenerate() {
 
 // show popup
 $("#yes").click(function () {
-  var audio = new Audio("/tick.mp3");
+  var audio = new Audio("./tick.mp3");
   audio.play();
   Swal.fire({
     title: CONFIG.question,
@@ -101,10 +101,10 @@ $("#yes").click(function () {
     width: 900,
     padding: "3em",
     html: "<input type='text' class='form-control' id='txtReason' onmousemove=textGenerate()  placeholder='Whyyy'>",
-    background: '#fff url("/iput-bg.jpg")',
+    background: '#fff url("./iput-bg.jpg")',
     backdrop: `
               rgba(50, 50, 223, 0.4)
-              url("img/giphy2.gif")
+              url(".img/giphy2.gif")
               left top
               no-repeat
             `,
@@ -116,7 +116,7 @@ $("#yes").click(function () {
       Swal.fire({
         width: 900,
         confirmButtonText: CONFIG.btnAccept,
-        background: '#fff url("/iput-bg.jpg")',
+        background: '#fff url("./iput-bg.jpg")',
         title: CONFIG.mess,
         text: CONFIG.messDesc,
         confirmButtonColor: "#83d0c9",
